@@ -90,6 +90,7 @@
   function intro() {
     hud.hidden = true;
     mostra(`
+      <img class="logo" src="${esc(config.logo)}" alt="${esc(config.produto)}">
       ${slot('hero')}
       <p class="kicker">${esc(config.produto)}</p>
       <h1>Seu casamento ainda tem jeito?</h1>

@@ -21,6 +21,10 @@ if (process.argv.includes('--fragment')) {
   html = `${titulo}\n<meta name="claude:viewport-fit-sides" content="cover">\n${fonte}\n${estilo}\n${corpo}`;
 }
 
+// Imagens locais viram data URI para o preview não depender de arquivos.
+html = html.replace(/assets\/img\/logo\.webp/g, () =>
+  'data:image/webp;base64,' + readFileSync(join(raiz, 'assets/img/logo.webp')).toString('base64'));
+
 import { mkdirSync } from 'node:fs';
 mkdirSync(dirname(saida), { recursive: true });
 writeFileSync(saida, html);

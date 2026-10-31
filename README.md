@@ -1,4 +1,4 @@
-# Desafio Marido Presente: quiz gamificado
+# Desafio Nós Dois de Novo: quiz gamificado
 
 Quiz para homens que querem reconquistar a esposa. Português do Brasil, tom informal e direto, sem sermão.
 
