@@ -11,6 +11,7 @@
   --mid: #f2a93b;
   --bad: #ef5b6b;
   --r: 16px;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; margin: 0; }
@@ -24,10 +25,10 @@ body {
 button { font: inherit; color: inherit; cursor: pointer; }
 code { background: var(--card2); padding: 1px 6px; border-radius: 6px; font-size: .9em; }
 
-.app { max-width: 480px; margin: 0 auto; min-height: 100dvh; padding: 0 16px 40px; }
+.app { max-width: 480px; margin: 0 auto; min-height: 100dvh; padding-block: 0 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 
 /* HUD */
-.hud { position: sticky; top: 0; z-index: 5; padding: 14px 0 10px; background: linear-gradient(var(--bg) 75%, transparent); }
+.hud { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; padding: 14px 0 10px; background: linear-gradient(var(--bg) 75%, transparent); }
 .hud-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--mut); margin-bottom: 8px; }
 .hud-lvl { font-weight: 600; letter-spacing: .02em; }
 .hud-stats b { margin-left: 12px; color: var(--txt); }
